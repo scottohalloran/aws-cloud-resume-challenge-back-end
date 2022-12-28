@@ -7,13 +7,12 @@ phases:
 
   pre_build:
     commands:
-      - cd terraform # change to terraform directory
-      - chmod +r *.tf # make all terraform files readable
       - cd ../scripts # change to scripts directory
       - chmod +x install-terraform.sh apply-terraform.sh create-backend-s3.sh # make files executable
       - ./install-terraform.sh # install terraform
       - ./create-backend-s3.sh # create S3 bucket to store TFState
+      - cd terraform # change to terraform directory
 
   build:
     commands:
-      - ./apply-terraform.sh
+      - ../apply-terraform.sh
