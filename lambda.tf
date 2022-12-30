@@ -35,8 +35,8 @@ resource "aws_cloudwatch_log_group" "update-counter-tf" {
 # that reads from and writes to the DynamoDB table
 data "archive_file" "update-counter-tf" {
   type        = "zip"
-  source_file = "../python/update-counter-tf.py"
-  output_path = "../python/update-counter-tf.zip"
+  source_file = "update-counter-tf.py"
+  output_path = "update-counter-tf.zip"
 }
 # Create the lambda function
 resource "aws_lambda_function" "update-counter-tf" {
