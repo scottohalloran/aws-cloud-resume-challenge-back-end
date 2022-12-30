@@ -15,4 +15,4 @@ phases:
 
   build:
     commands:
-      - ../scripts/apply-terraform.sh
+      - ./apply-terraform.sh
