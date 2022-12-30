@@ -12,6 +12,7 @@ phases:
       - ./install-terraform.sh # install terraform
       - ./create-backend-s3.sh # create S3 bucket to store TFState
       - cd ../terraform # change to terraform directory
+      - chmod +rx *.tf # make files read and executable
 
   build:
     commands:
